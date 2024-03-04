@@ -8,4 +8,4 @@ This is a small system that will be helpful for their teachers to teach classes
 
 ## ERD
 
-![alt text](https://github.com/ArturoMgzm/web-activity-/blob/main/ERD.png?raw=true)
+![alt text](https://github.com/ArturoMgzm/web-activity-/main/ERD.png?raw=true)
