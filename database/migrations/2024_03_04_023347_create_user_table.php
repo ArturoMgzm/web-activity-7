@@ -16,15 +16,14 @@ return new class extends Migration
         Schema::create('user', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
-            $table->string('email')->unique();
+            $table->string('email');
             $table->string('password');
             $table->string('role');
-            $table->unsignedBigInteger('groupId')->unique(); 
+            $table->unsignedBigInteger('groupId')->nullable(); 
             $table->foreign('groupId') 
                 ->references('id') 
                 ->on('group') 
-                ->onDelete('cascade') 
-                ->unique(); 
+                ->onDelete('cascade'); 
         });
     }
 

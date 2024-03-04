@@ -16,20 +16,18 @@ return new class extends Migration
         Schema::create('groupcourses', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
-            $table->unsignedBigInteger('group_id')->unique(); 
-            $table->unsignedBigInteger('course_id')->unique(); 
+            $table->unsignedBigInteger('group_id'); 
+            $table->unsignedBigInteger('course_id'); 
 
             $table->foreign('group_id') 
                 ->references('id') 
                 ->on('group') 
-                ->onDelete('cascade') 
-                ->unique(); 
+                ->onDelete('cascade');
                 
             $table->foreign('course_id') 
                 ->references('id') 
                 ->on('course') 
-                ->onDelete('cascade') 
-                ->unique(); 
+                ->onDelete('cascade');
         });
     }
 

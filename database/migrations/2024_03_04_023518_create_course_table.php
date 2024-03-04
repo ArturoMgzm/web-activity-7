@@ -20,12 +20,11 @@ return new class extends Migration
             $table->string('cover');
             $table->string('content');
             $table->string('key')->unique();
-            $table->unsignedBigInteger('roboticsKitId')->unique(); 
+            $table->unsignedBigInteger('roboticsKitId'); 
             $table->foreign('roboticsKitId') 
                 ->references('id') 
                 ->on('roboticskit') 
-                ->onDelete('cascade') 
-                ->unique(); 
+                ->onDelete('cascade'); 
         });
     }
 
